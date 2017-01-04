@@ -1,0 +1,41 @@
+citHeader("When using pwt9 in publications, please cite both the pwt9 package and the Penn World Table itself:")
+
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("pwt9")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+citEntry(entry = "Manual",
+         title = "pwt9: Penn World Table (Version 9.x)",
+         author = personList(as.person("Achim Zeileis")),
+         year         = year,
+         note         = note,
+	 url          = "https://CRAN.R-project.org/package=pwt9",
+
+         textVersion = 
+         paste("Achim Zeileis",
+               sprintf("(%s).", year),
+               "pwt9: Penn World Table (Version 9.x).",
+	       paste(note, ".", sep = ""),
+	       "URL https://CRAN.R-project.org/package=pwt9."),
+	 header = "To cite pwt9, the R package, please use:"
+)
+
+citEntry(entry = "Article",
+         title = "The Next Generation of the Penn World Table",
+         author = personList(as.person("Robert C. Feenstra"),
+	                     as.person("Robert Inklaar"), 
+	                     as.person("Marcel P. Timmer")),
+         year         = "2015",
+	 journal      = "American Economic Review",
+	 volume       = "105",
+	 number       = "10",
+	 pages        = "3150--3182",
+         url          = "http://www.ggdc.net/pwt/",
+         
+         textVersion = 
+         paste("Robert C. Feenstra, Robert Inklaar, Marcel P. Timmer (2015).", 
+               "The Next Generation of the Penn World Table.",
+               "American Economic Review, 105(10), 3150-3182.",
+               "URL http://www.ggdc.net/pwt/."),
+	 header = "To cite the Penn World Table (version 8.x), please use:"
+)
