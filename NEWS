@@ -1,3 +1,11 @@
+Changes in Version 9.1-0
+
+  o Update for PWT 9.1 (originally released in April 2019).
+    It is an updated version of PWT 9.0, covering the same
+    countries and extending the period to 1950-2017 (from
+    (1950-2014).
+
+
 Changes in Version 9.0-0
 
   o New package pwt9 for PWT 9.x. So far only PWT 9.0 has
